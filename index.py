@@ -99,7 +99,7 @@ def post():
   med = Image.fromarray(result)
   if settings.median_filter > 0:
     med = med.filter(ImageFilter.MedianFilter(settings.median_filter))
-  if settins.keep_colors:
+  if settings.keep_colors:
     med = original_colors(original, med)
   end = time.time()
   print(end - start, 'sec')
